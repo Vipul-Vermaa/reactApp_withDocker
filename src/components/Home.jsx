@@ -5,7 +5,7 @@ import bgGif from '../gif/giphy.gif'
 const Card=({title,imageUrl,url})=>(
   <div className="card">
      <a href={url} target="_blank" rel="noopener noreferrer">
-    <img src={imageUrl} alt="Article Image" />
+    <img src={imageUrl} alt="preview" />
     <h5 className="card-title">{title}</h5>
     </a>
   </div>
