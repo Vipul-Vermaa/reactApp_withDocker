@@ -39,7 +39,15 @@ const Home = () => {
   useEffect(() => {
   const fetchUpcomning=async()=>{
     try{
-  const response=await axios.get("https://newsapi.org/v2/top-headlines?q=football&apiKey=7f1f8844c098447a864a119e07a27b25")
+  const response=await axios.get("https://newsapi.org/v2/top-headlines",{
+    params:{
+      q:'football',
+      apiKey:'7f1f8844c098447a864a119e07a27b25'
+    },
+    headers:{
+      'Accept': 'application/json'
+    }
+  })
   console.log(response.data)
   setUpcoming(response.data.articles)
   }catch(error){
